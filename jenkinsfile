@@ -1,0 +1,17 @@
+pipeline{
+agent any
+stages{
+stage('log jenkins'){
+steps{
+sh'mvn -apache-maven-3.8.6'
+sh'java -jdk-11.0.16.1'
+sh'git -'
+}
+}
+stage(2github jenkins build'){
+steps{
+sh'mvn clean compile test'
+}
+}
+}
+}
