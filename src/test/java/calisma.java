@@ -1,4 +1,4 @@
-import org.junit.jupiter.api.Assertions;
+
 import org.testng.Assert;
 import org.testng.AssertJUnit;
 import org.testng.annotations.AfterTest;
@@ -39,13 +39,13 @@ public  void testsonu(){
         System.out.println("En büyük ikinci= " + max2);
 
 
-            Assertions.assertTrue(max1 >= max2);
+            Assert.assertTrue(max1 >= max2);
 
         for (int i = 0; i < nums.length-1; i++) {
-            Assertions.assertTrue(max1 >= nums[i]);
+            Assert.assertTrue(max1 >= nums[i]);
         }
         for (int i = 0; i < nums.length-2; i++) {
-            Assertions.assertTrue(max2 >= nums[i]);
+            Assert.assertTrue(max2 >= nums[i]);
         }
 
         }
