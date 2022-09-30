@@ -14,7 +14,7 @@ pipeline {
 
                 // Run Maven on a Unix agent.
                // sh "mvn -Dmaven.test.failure.ignore=true clean package"
- // step([$class: 'Publisher', reportFilenamePattern: '**/custom/testng-results.xml'])
+ step([$class: 'Publisher', reportFilenamePattern: '**/custom/testng-results.xml'])
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
@@ -24,7 +24,7 @@ pipeline {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
                 success {
-                    junit '**/target/surefire-reports/TEST-*.xml'
+                    junit '**/C:\Users\gker_\IdeaProjects\gkerinelProject\target/surefire-reports/TEST-*.xml'
                     archiveArtifacts 'target/*.jar'
                 }
             }
