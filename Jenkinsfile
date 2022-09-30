@@ -23,7 +23,7 @@ pipeline {
                 // failed, record the test results and archive the jar file.
                 success {
                     testng '**/target/testng-results.xml*'
-                   archiveArtifacts 'target/*.jar'
+                   //archiveArtifacts 'target/*.jar'
                 }
             }
         }
