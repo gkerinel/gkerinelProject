@@ -23,7 +23,7 @@ pipeline {
                 // failed, record the test results and archive the jar file.
                 success {
                     junit '**/target/test-classes/TEST-*.xml'
-                   
+                   archiveArtifacts 'target/*.jar'
                 }
             }
         }
