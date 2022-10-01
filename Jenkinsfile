@@ -14,8 +14,9 @@ pipeline {
 
                 // Run Maven on a Unix agent.
                sh "mvn -Dmaven.test.failure.ignore=true clean package"
- step([$class: 'Publisher', reportFilenamePattern: '**/custom/testng-results.xml'])
+ //step([$class: 'Publisher', reportFilenamePattern: '**/custom/testng-results.xml'])
 
+                sh'./mvnw clean package'
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
