@@ -1,14 +1,33 @@
 pipeline:
-agent:
-any:
-tools:
-maven:"MAVEN_HOME"
-stages:
--stage:"TEST"
-steps:
+ # Define Agent. Master will be used for this pipeline
+ agent:
+   none
 
-git 'https://github.com/gkerinel/gkerinelProject.git'
+ tools:
+   maven: MAVEN_HOME
 
-post:
-succes:
- junit allowEmptyResults:true, testResults: '**/test-results/*.xml'  
+ stages:
+
+   - stage: TEST
+     
+     steps:
+      
+      
+       - git 'https://github.com/aytuncbeken/pipeline-as-yaml-tutorials.git'
+   # Define Maven Stage
+   - stage: Maven
+     # Define Sequential Staget
+     stages:
+       - stage: Build
+         steps:
+           # Use 'sh' step for running maven commands
+           - sh 'mvn clean compile'
+       - stage: Test
+         steps:
+           # Use script as well
+           script:
+             - sh "mvn clean test"
+ # Define post actions
+ post:
+   always:
+     - cleanWs()
