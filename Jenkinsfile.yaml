@@ -1,7 +1,7 @@
 pipeline:
  # Define Agent. Master will be used for this pipeline
  agent:
-   none
+   any:
 
  tools:
    maven: MAVEN_HOME
