@@ -13,7 +13,7 @@ pipeline:
      steps:
       
       
-       - git 'https://github.com/aytuncbeken/pipeline-as-yaml-tutorials.git'
+       - git 'https://github.com/gkerinel/gkerinelProject.git'
    # Define Maven Stage
    - stage: Maven
      # Define Sequential Staget
