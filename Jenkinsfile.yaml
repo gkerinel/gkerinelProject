@@ -1,8 +1,9 @@
 pipeline:
 
  agent:
-   any:
-
+   #any:
+node:
+label: "master"
  tools:
    maven: MAVEN_HOME
 
