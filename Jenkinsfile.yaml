@@ -18,5 +18,5 @@ pipeline:
  post:
   
    
-      - junit allowEmptyResults:true, testResults: '**/test-results/*.xml'   
+      junit allowEmptyResults:true, testResults: '**/test-results/*.xml'   
      - cleanWs()
