@@ -8,18 +8,19 @@ import java.util.Arrays;
 
 public class testclass {
 
-@BeforeTest
-public void testStart(){
-    System.out.println("test initiated");
-}
+    @BeforeTest
+    public void testStart() {
+        System.out.println("test initiated");
+    }
 
-@AfterTest
-public  void testDone(){
+    @AfterTest
+    public void testDone() {
 
-    System.out.println("test completed");
-}
+        System.out.println("test completed");
+    }
+
     @Test
-    public void   testaArrays () {
+    public void testaArrays() {
 
         int[] nums = new int[10];
 
@@ -38,18 +39,19 @@ public  void testDone(){
         System.out.println("max2= " + max2);
 
 
-            Assert.assertTrue(max1 >= max2);
+        Assert.assertTrue(max1 >= max2);
 
-        for (int i = 0; i < nums.length-1; i++) {
+        for (int i = 0; i < nums.length - 1; i++) {
             Assert.assertTrue(max1 >= nums[i]);
         }
-        for (int i = 0; i < nums.length-2; i++) {
+        for (int i = 0; i < nums.length - 2; i++) {
             Assert.assertTrue(max2 >= nums[i]);
         }
 
-        }
-
     }
+
+}
+
 
 
 

@@ -4,7 +4,7 @@
 <suite name="Jenkins Test Suite">
     <test name="Jenkins Test">
         <classes>
-            <class name="testclass"></class>
+            <class name="unitTest"></class>
         </classes>
     </test>
 </suite>
