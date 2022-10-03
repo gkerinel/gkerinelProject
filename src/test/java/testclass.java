@@ -1,26 +1,25 @@
 
 import org.testng.Assert;
-import org.testng.AssertJUnit;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class calisma {
+public class testclass {
 
 @BeforeTest
 public void testStart(){
-    System.out.println("test başlıyor");
+    System.out.println("test initiated");
 }
 
 @AfterTest
-public  void testsonu(){
+public  void testDone(){
 
-    System.out.println("test bitti");
+    System.out.println("test completed");
 }
     @Test
-    public void   testarrays () {
+    public void   testaArrays () {
 
         int[] nums = new int[10];
 
@@ -35,8 +34,8 @@ public  void testsonu(){
         int max1 = nums[nums.length - 1];
         int max2 = nums[nums.length - 2];
 
-        System.out.println("Maximu = " + max1);
-        System.out.println("En büyük ikinci= " + max2);
+        System.out.println("max1 = " + max1);
+        System.out.println("max2= " + max2);
 
 
             Assert.assertTrue(max1 >= max2);
