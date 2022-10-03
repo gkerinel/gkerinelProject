@@ -16,6 +16,5 @@ pipeline:
        - git 'https://github.com/gkerinel/gkerinelProject.git'
   
  post:
-  
- always:
+   always:
      - cleanWs()
