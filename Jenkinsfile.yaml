@@ -1,21 +1,20 @@
 pipeline:
 
-agent:
-
+ agent:
    any:
-   
-tools:
 
+ tools:
    maven: MAVEN_HOME
-stages:
 
- - stage: TEST
- 
-     steps:
+ stages:
+
+   - stage: TEST
      
-        - git 'https://github.com/gkerinel/gkerinelProject.git'
-   post:
-   
+     steps:
+      
+      
+       - git 'https://github.com/gkerinel/gkerinelProject.git'
+  
+ post:
    always:
-   
      - cleanWs()
