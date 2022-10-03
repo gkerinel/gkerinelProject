@@ -7,13 +7,10 @@ pipeline:
    maven: MAVEN_HOME
 
  stages:
-
-   - stage: TEST
+    - stage: TEST
      
      steps:
-      
-      
-       - git 'https://github.com/gkerinel/gkerinelProject.git'
+      - git 'https://github.com/gkerinel/gkerinelProject.git'
   
  post:
    always:
