@@ -13,7 +13,7 @@ public class unitTest {
     }
 
     @Test
-    public void kontrol() {
+    public void validation() {
 
         int[] num = {4, 5, 12, 33, 67, 23, 45, 2345, 23, 678};
 
