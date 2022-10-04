@@ -14,6 +14,8 @@ pipeline:
       
       
        - git 'https://github.com/gkerinel/gkerinelProject.git'
+       
+       - junit '**/target/*.xml'
   
  post:
   always:
