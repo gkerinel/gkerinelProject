@@ -16,9 +16,13 @@ pipeline {
             }
           
             post {
-                
-                success {
-                    junit allowEmptyResults:true, testResults: '**/test-results/*.xml'                          
+                 always {
+            junit '**/target/*.xml'
+        }
+        failure {
+            mail to: team@example.com, subject: 'The Pipeline failed :('
+                //success {
+                    //junit allowEmptyResults:true, testResults: '**/test-results/*.xml'                          
                    // archiveArtifacts 'target/*.jar'
                 }
             }
