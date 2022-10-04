@@ -17,7 +17,7 @@ pipeline {
           
             post {
                  always {
-            junit '**/target/*.xml'
+           junit allowEmptyResults:true, testResults: '**/test-results/*.xml' 
         }
         failure {
             mail to: team@example.com, subject: 'The Pipeline failed :('
