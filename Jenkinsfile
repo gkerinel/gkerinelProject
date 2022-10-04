@@ -20,7 +20,7 @@ pipeline {
            junit allowEmptyResults:true, testResults: '**/test-results/*.xml' 
         }
         failure {
-            mail to: team@example.com, subject: 'The Pipeline failed :('
+            mail to: teamgker_inel@hotmail.com, subject: 'The Pipeline failed :('
                 //success {
                     //junit allowEmptyResults:true, testResults: '**/test-results/*.xml'                          
                    // archiveArtifacts 'target/*.jar'
