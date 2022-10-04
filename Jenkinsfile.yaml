@@ -16,5 +16,9 @@ pipeline:
        - git 'https://github.com/gkerinel/gkerinelProject.git'
   
  post:
-   always:
+   success:
+   
+    - junit allowEmptyResults:true, testResults: '**/test-results/*.xml' 
+    
+    
      - cleanWs()
