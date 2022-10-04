@@ -19,10 +19,8 @@ pipeline {
                  always {
            junit allowEmptyResults:true, testResults: '**/test-results/*.xml' 
        
-                //success {
-                    //junit allowEmptyResults:true, testResults: '**/test-results/*.xml'                          
-                   // archiveArtifacts 'target/*.jar'
-                }
+                                
+                   
             }
         }
     }
