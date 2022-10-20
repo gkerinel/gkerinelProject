@@ -6,5 +6,5 @@
  4-Project pushed to GitHub.
  5-Jenkins is installed and configured.
  6-Pipeline project created with YAML
-
+ 7-Completed
 https://github.com/gkerinel/gkerinelProject.git
